@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+<style>
+
+
+
+
+body { 
+	width: 50%;
+	height:50%;
+	font-family: 'Open Sans', sans-serif;
+	background: #092756;
+	color: #fff;
+	font-size: 18px;
+	text-align:center;
+	letter-spacing:1.2px;
+	background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 110%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 30%,#092756 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+
+}
+
+input { 
+	width: 100%; 
+	margin-bottom: 5px; 
+	background: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+
+
+</style>
+
+        
+</head>
+<body>
+<div>
+    <form action="/predict"method="post">
+      <div class="row">
+          <div class="col-md-12">
+        <h1><center>Loan Prediction Machine Learning</center> </h1>
+
+	 <title><center>Loan Prediction Machine Learning </center></title>
+          <legend><span class="number"></span><center>Basic Info</center></legend>
+
+          <label>Gender:</label>
+          <input type="radio" id="Male" value="Male" name="Gender"><label for="Male" class="light">Male</label>
+          <input type="radio" id="Female" value="Female" name="Gender"><label for="Female" class="light">Female</label><br>
+          <br>
+<br>
+
+          <label for="Married history">Married:</label>
+          <select id="Married history" name="Married">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+          </select>
+
+<br>
+<br>
+          <label for="dependents">Dependent:</label>
+          <select id="dependents" name="Dependents">
+              <option value="0">Not applicable</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3 or more</option>
+          </select>
+<br>
+<br>
+          <label for="Education">Education level:</label>
+          <select id="education" name="Education">
+              <option value="1">Graduate</option>
+              <option value="0">Not graduate</option>
+          </select>
+<br>
+<br>
+          <label for="SelfEmployed">Employment status:</label>
+          <select id="selfemployed" name="Self_Employed">
+              <option value="0">Not self employed</option>
+              <option value="1">Self employed</option>
+          </select>
+<br>
+<br>
+          <label for="ApplicantIncome">Current monthly income:</label>
+          <input type="number" id="ApplicantIncome" name="ApplicantIncome">
+<br>
+<br>
+          <label for="CoapplicantIncome">Spouse's income (if not married put 0):</label>
+          <input type="number" id="CoapplicantIncome" name="CoapplicantIncome">
+<br>
+<br>
+          <label for="LoanAmount">Desired loan amount:</label>
+          <input type="number" id="LoanAmount" name="LoanAmount">
+<br>
+<br>
+          <label for="LoanTerm">Chosen loan term:</label>
+          <select id="LoanTerm" name="Loan_Amount_Term">
+              <option value="0">Loan term</option>
+              <option value="84">84 days</option>
+              <option value="120">4 months</option>
+              <option value="180">6 months</option>
+              <option value="240">8 months</option>
+              <option value="300">10 months</option>
+              <option value="360">1 year</option>
+              <option value="480">16 months</option>
+          </select>
+<br>
+<br>
+
+          <label for="Credit history">Credit history:</label>
+          <select id="credit history" name="Credit_History">
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+          </select>
+<br>
+<br>
+          <label>Geographical area:</label>
+          <input type="checkbox" id="Semiurban" value="0" name="Property_Area"><label class="light" for="semiurban">Semiurban</label>
+          <input type="checkbox" id="urban" value="1" name="Property_Area"><label class="light" for="urban">Urban</label>
+          <input type="checkbox" id="rural" value="2" name="Property_Area"><label class="light" for="rural">Rural</label>
+          <br>
+          <br>
+		
+	<br>
+
+          <br>
+
+        <button type="submit">SUBMIT</button>
+
+    </form>
+    <br>
+    <br>
+      </div class="output"><h1>{{output}}<h1></div>
+       </div>
+
+</body>
+</html>
